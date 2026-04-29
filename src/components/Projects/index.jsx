@@ -11,21 +11,24 @@ const Projects = () => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
+    const isMobile = window.innerWidth <= 768;
     gsap.fromTo('.project-card', 
       {
-        y: 30,
+        y: isMobile ? 20 : 30,
         opacity: 0,
       },
       {
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top 80%',
+          start: isMobile ? 'top 90%' : 'top 80%',
+          once: true,
         },
         y: 0,
         opacity: 1,
-        duration: 0.6,
-        stagger: 0.1,
+        duration: isMobile ? 0.4 : 0.6,
+        stagger: isMobile ? 0.05 : 0.1,
         ease: 'power2.out',
+        force3D: true,
       }
     );
   }, { scope: containerRef });

@@ -8,6 +8,9 @@ const Cursor = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
+    // Disable on mobile
+    if (window.innerWidth <= 768) return;
+
     const onMouseMove = (e) => {
       const { clientX, clientY } = e;
       

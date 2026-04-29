@@ -11,24 +11,29 @@ const Skills = () => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
+    const isMobile = window.innerWidth <= 768;
     const categories = gsap.utils.toArray('.skill-category');
     
     categories.forEach(category => {
-      gsap.fromTo(category.querySelectorAll('.skill-item'), 
+      const items = category.querySelectorAll('.skill-item');
+      
+      gsap.fromTo(items, 
         {
-          y: 20,
+          y: isMobile ? 10 : 20,
           opacity: 0,
         },
         {
           scrollTrigger: {
             trigger: category,
-            start: 'top 85%',
+            start: isMobile ? 'top 95%' : 'top 85%',
+            once: true, // Only trigger once for performance
           },
           y: 0,
           opacity: 1,
-          duration: 0.5,
-          stagger: 0.05,
+          duration: isMobile ? 0.3 : 0.5,
+          stagger: isMobile ? 0.02 : 0.05,
           ease: 'power2.out',
+          force3D: true, // Force hardware acceleration
         }
       );
     });
