@@ -1,0 +1,14 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  text-align: center;
+  padding: 2rem 5%;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: auto; // to push footer to bottom
+
+  p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+  }
+}

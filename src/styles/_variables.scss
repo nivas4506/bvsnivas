@@ -1,0 +1,22 @@
+:root {
+  --color-bg: #0a0a0f;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-accent: #00d4ff;
+  --color-text-primary: #e8e8e8;
+  --color-text-muted: #888888;
+  --blur-glass: 12px;
+  --border-glass: 1px solid rgba(255, 255, 255, 0.08);
+  --radius-card: 16px;
+  --radius-pill: 999px;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin glass-card {
+  background: var(--color-surface);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border: var(--border-glass);
+  border-radius: var(--radius-card);
+}

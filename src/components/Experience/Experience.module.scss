@@ -1,0 +1,91 @@
+@use '../../styles/variables' as *;
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    height: 100%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    .timelineDot {
+      background: var(--color-accent);
+      box-shadow: 0 0 10px var(--color-accent);
+    }
+  }
+}
+
+.timelineDot {
+  position: absolute;
+  left: 9px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid var(--color-accent);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.timelineContent {
+  @include glass-card;
+  padding: 2rem;
+
+  h3 {
+    color: var(--color-text-primary);
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+}
+
+.year {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-size: 0.9rem;
+}
+
+.institution {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+
+    &::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+    }
+  }
+}

@@ -1,0 +1,90 @@
+@use '../../styles/variables' as *;
+
+.contact {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 2.5rem;
+    color: var(--color-text-primary);
+  }
+
+  p {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+}
+
+.emailContainer {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.emailBtn {
+  @include glass-card;
+  padding: 1rem 2rem;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+  }
+}
+
+.toast {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: bold;
+  animation: fadeInOut 2s ease forwards;
+}
+
+.badge {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--color-accent);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  a {
+    color: var(--color-text-primary);
+    font-family: var(--font-mono);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, 10px); }
+  20% { opacity: 1; transform: translate(-50%, 0); }
+  80% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -10px); }
+}

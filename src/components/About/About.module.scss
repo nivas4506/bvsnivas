@@ -1,0 +1,64 @@
+@use '../../styles/variables' as *;
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 4rem;
+  
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.bio {
+  p {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statCard {
+  @include glass-card;
+  padding: 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 212, 255, 0.2);
+  }
+
+  // Make the first card span 2 columns if there's an odd number
+  &:nth-child(3) {
+    grid-column: span 2;
+    
+    @media (max-width: 480px) {
+      grid-column: span 1;
+    }
+  }
+}
+
+.statValue {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+}
