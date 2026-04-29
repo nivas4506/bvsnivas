@@ -14,13 +14,15 @@
   margin: 0 auto;
 
   h3 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 8vw, 3rem);
     color: var(--color-text-primary);
+    margin-bottom: 1rem;
   }
 
   p {
     color: var(--color-text-muted);
     line-height: 1.6;
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
   }
 }
 
@@ -33,9 +35,16 @@
   @include glass-card;
   padding: 1rem 2rem;
   font-family: var(--font-mono);
-  font-size: 1.2rem;
+  font-size: clamp(0.85rem, 4vw, 1.2rem);
   color: var(--color-accent);
   transition: var(--transition);
+  width: 100%;
+  max-width: fit-content;
+  word-break: break-all;
+
+  @media (max-width: 480px) {
+    padding: 0.8rem 1.2rem;
+  }
 
   &:hover {
     transform: translateY(-2px);
@@ -70,11 +79,18 @@
   display: flex;
   gap: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 480px) {
+    gap: 1.5rem;
+  }
 
   a {
     color: var(--color-text-primary);
     font-family: var(--font-mono);
     transition: var(--transition);
+    font-size: 0.9rem;
 
     &:hover {
       color: var(--color-accent);

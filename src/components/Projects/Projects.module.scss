@@ -22,6 +22,10 @@
   transition: var(--transition);
   height: 100%;
 
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
@@ -29,9 +33,13 @@
 
   h3 {
     color: var(--color-text-primary);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
     margin-top: 1.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -41,8 +49,12 @@
   align-items: center;
 
   .folder {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-accent);
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
   }
 
   .links {
@@ -62,10 +74,14 @@
 
 .description {
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   flex-grow: 1;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+  }
 }
 
 .techStack {
