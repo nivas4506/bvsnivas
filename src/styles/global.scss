@@ -1,6 +1,12 @@
 @use './variables' as *;
 @use './reset' as *;
 
+body {
+  margin: 0;
+  cursor: none;
+  background-color: var(--color-bg);
+}
+
 #root {
   min-height: 100vh;
   display: flex;

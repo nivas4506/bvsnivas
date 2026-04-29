@@ -61,12 +61,19 @@ const Navbar = () => {
   }, []);
 
   const handleLogoDoubleClick = () => {
-    const colors = ['#00d4ff', '#ff00d4', '#00ff88', '#ffaa00', '#ff003c'];
+    const themeOptions = [
+      { hex: '#00d4ff', rgb: '0, 212, 255' },
+      { hex: '#ff00d4', rgb: '255, 0, 212' },
+      { hex: '#00ff88', rgb: '0, 255, 136' },
+      { hex: '#ffaa00', rgb: '255, 170, 0' },
+      { hex: '#ff003c', rgb: '255, 0, 60' }
+    ];
     const tl = gsap.timeline();
     
-    colors.forEach((color) => {
+    themeOptions.forEach((option) => {
       tl.to(document.documentElement, {
-        '--color-accent': color,
+        '--color-accent': option.hex,
+        '--color-accent-rgb': option.rgb,
         duration: 0.5,
       });
     });
@@ -74,6 +81,7 @@ const Navbar = () => {
     // Return to original
     tl.to(document.documentElement, {
       '--color-accent': '#00d4ff',
+      '--color-accent-rgb': '0, 212, 255',
       duration: 0.5,
     });
   };
