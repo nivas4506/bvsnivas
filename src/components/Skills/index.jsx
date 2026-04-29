@@ -46,7 +46,10 @@ const Skills = () => {
               {category.items.map((item, i) => (
                 <div key={i} className={`skill-item ${styles.item}`}>
                   <img 
-                    src={`https://cdn.simpleicons.org/${item.icon}/00d4ff`} 
+                    src={item.icon.includes(':') 
+                      ? `https://api.iconify.design/${item.icon}.svg${item.icon.startsWith('simple-icons') ? '?color=%2300d4ff' : ''}`
+                      : `https://api.iconify.design/simple-icons:${item.icon}.svg?color=%2300d4ff`
+                    } 
                     alt={item.name} 
                     className={styles.icon}
                   />

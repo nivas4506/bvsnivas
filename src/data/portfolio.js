@@ -50,7 +50,7 @@ export const portfolio = {
       items: [
         { name: "pandas", icon: "pandas" },
         { name: "NumPy", icon: "numpy" },
-        { name: "Microsoft Excel", icon: "googlesheets" },
+        { name: "Microsoft Excel", icon: "logos:microsoft-excel" },
         { name: "Statistical Methods", icon: "jupyter" },
         { name: "Data Interpretation", icon: "databricks" }
       ]
@@ -69,7 +69,7 @@ export const portfolio = {
     {
       category: "Inference & Agent Frameworks",
       items: [
-        { name: "vLLM", icon: "v" },
+        { name: "vLLM", icon: "simple-icons:pytorch" },
         { name: "Triton", icon: "nvidia" },
         { name: "TorchServe (familiar)", icon: "pytorch" },
         { name: "Agentic AI", icon: "anthropic" },
@@ -80,7 +80,7 @@ export const portfolio = {
       category: "Infrastructure & DevOps",
       items: [
         { name: "Docker", icon: "docker" },
-        { name: "AWS", icon: "amazonwebservices" },
+        { name: "AWS", icon: "simple-icons:amazonaws" },
         { name: "Git", icon: "git" },
         { name: "GitHub", icon: "github" },
         { name: "Distributed Systems", icon: "apachekafka" },
@@ -92,10 +92,10 @@ export const portfolio = {
       category: "Core Competencies",
       items: [
         { name: "Data Structures & Algorithms", icon: "leetcode" },
-        { name: "OOP", icon: "codeblocks" },
+        { name: "OOP", icon: "codio" },
         { name: "System Design", icon: "diagramsdotnet" },
         { name: "FastAPI (familiar)", icon: "fastapi" },
-        { name: "gRPC (familiar)", icon: "grpc" }
+        { name: "gRPC (familiar)", icon: "logos:grpc" }
       ]
     }
   ],

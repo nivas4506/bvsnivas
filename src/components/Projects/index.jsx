@@ -59,7 +59,15 @@ const Projects = () => {
             <div className={styles.techStack}>
               {project.tech.map((t, i) => (
                 <span key={i} className={styles.techPill}>
-                  <img src={`https://cdn.simpleicons.org/${t.icon}/00d4ff`} alt={t.name} width="14" height="14" />
+                  <img 
+                    src={t.icon.includes(':') 
+                      ? `https://api.iconify.design/${t.icon}.svg${t.icon.startsWith('simple-icons') ? '?color=%2300d4ff' : ''}`
+                      : `https://api.iconify.design/simple-icons:${t.icon}.svg?color=%2300d4ff`
+                    } 
+                    alt={t.name} 
+                    width="14" 
+                    height="14" 
+                  />
                   {t.name}
                 </span>
               ))}
