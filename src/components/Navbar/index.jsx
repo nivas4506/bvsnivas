@@ -11,6 +11,18 @@ const Navbar = () => {
   const logoRef = useRef(null);
   const audioRef = useRef(null);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [menuOpen]);
+
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Education', href: '#education' },

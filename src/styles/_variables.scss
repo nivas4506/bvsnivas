@@ -23,8 +23,16 @@
   will-change: transform, opacity;
 
   @media (max-width: 768px) {
+    // Reduce blur on mobile for better scroll performance
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    background: rgba(255, 255, 255, 0.08); // Slightly more opaque for visibility
+    background: rgba(255, 255, 255, 0.08);
   }
+}
+
+@mixin disable-native-popup {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: auto;
 }

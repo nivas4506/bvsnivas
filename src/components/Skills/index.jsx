@@ -19,21 +19,23 @@ const Skills = () => {
       
       gsap.fromTo(items, 
         {
-          y: isMobile ? 10 : 20,
+          y: 30,
+          scale: 0.7,
           opacity: 0,
         },
         {
           scrollTrigger: {
             trigger: category,
             start: isMobile ? 'top 95%' : 'top 85%',
-            once: true, // Only trigger once for performance
+            toggleActions: 'play reverse play reverse'
           },
           y: 0,
+          scale: 1,
           opacity: 1,
-          duration: isMobile ? 0.3 : 0.5,
-          stagger: isMobile ? 0.02 : 0.05,
-          ease: 'power2.out',
-          force3D: true, // Force hardware acceleration
+          duration: 0.6,
+          stagger: 0.08,
+          ease: 'back.out(1.5)',
+          force3D: true,
         }
       );
     });
@@ -52,8 +54,8 @@ const Skills = () => {
                 <div key={i} className={`skill-item ${styles.item}`}>
                   <img 
                     src={item.icon.includes(':') 
-                      ? `https://api.iconify.design/${item.icon}.svg${item.icon.startsWith('simple-icons') ? '?color=%2300d4ff' : ''}`
-                      : `https://api.iconify.design/simple-icons:${item.icon}.svg?color=%2300d4ff`
+                      ? `https://api.iconify.design/${item.icon.replace(':', '/')}.svg${item.icon.startsWith('simple-icons') ? '?color=%2300d4ff' : ''}`
+                      : `https://api.iconify.design/simple-icons/${item.icon}.svg?color=%2300d4ff`
                     } 
                     alt={item.name} 
                     className={styles.icon}

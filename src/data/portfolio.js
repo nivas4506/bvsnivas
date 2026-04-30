@@ -2,7 +2,7 @@ export const portfolio = {
   name: "Bokkisam Venkata Sai Nivas",
   displayName: "Bokkisam Venkata Sai Nivas",
   tagline: "CS Engineer · AI Infrastructure · Containerized Systems",
-  email: "bvsnivaschowdary45@gmail.com",
+  email: "bvsnivaschowdary@gmail.com",
   phone: "+91 7997045477",
   resume: "/resume.pdf",
   status: "Open to research internships & SWE roles",
@@ -50,9 +50,9 @@ export const portfolio = {
       items: [
         { name: "pandas", icon: "pandas" },
         { name: "NumPy", icon: "numpy" },
-        { name: "Microsoft Excel", icon: "logos:microsoft-excel" },
-        { name: "Statistical Methods", icon: "jupyter" },
-        { name: "Data Interpretation", icon: "databricks" }
+        { name: "Microsoft Excel", icon: "vscode-icons:file-type-excel" },
+        { name: "Statistical Methods", icon: "logos:jupyter" },
+        { name: "Data Interpretation", icon: "simple-icons:databricks" }
       ]
     },
     {
@@ -60,9 +60,9 @@ export const portfolio = {
       items: [
         { name: "PyTorch", icon: "pytorch" },
         { name: "TensorFlow", icon: "tensorflow" },
-        { name: "Hugging Face (learning)", icon: "huggingface" },
-        { name: "LLM Fine-tuning", icon: "ollama" },
-        { name: "NLP", icon: "spacy" },
+        { name: "Hugging Face (learning)", icon: "simple-icons:huggingface" },
+        { name: "LLM Fine-tuning", icon: "simple-icons:ollama" },
+        { name: "NLP", icon: "simple-icons:spacy" },
         { name: "Deep Learning", icon: "keras" }
       ]
     },
@@ -70,10 +70,11 @@ export const portfolio = {
       category: "Inference & Agent Frameworks",
       items: [
         { name: "vLLM", icon: "simple-icons:pytorch" },
-        { name: "Triton", icon: "nvidia" },
+        { name: "Triton", icon: "logos:nvidia" },
         { name: "TorchServe (familiar)", icon: "pytorch" },
-        { name: "Agentic AI", icon: "anthropic" },
-        { name: "Agent Frameworks", icon: "langchain" }
+        { name: "Agentic AI", icon: "simple-icons:anthropic" },
+        { name: "Langchain", icon: "simple-icons:langchain" },
+        { name: "Langgraph", icon: "simple-icons:langchain" }
       ]
     },
     {
@@ -92,7 +93,7 @@ export const portfolio = {
       category: "Core Competencies",
       items: [
         { name: "Data Structures & Algorithms", icon: "leetcode" },
-        { name: "OOP", icon: "codio" },
+        { name: "OOP", icon: "mdi:cube-outline" },
         { name: "System Design", icon: "diagramsdotnet" },
         { name: "FastAPI (familiar)", icon: "fastapi" },
         { name: "gRPC (familiar)", icon: "logos:grpc" }

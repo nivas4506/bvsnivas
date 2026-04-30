@@ -2,13 +2,28 @@
 
 .footer {
   text-align: center;
-  padding: 2rem 5%;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  margin-top: auto; // to push footer to bottom
+  padding: 4rem 5% 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  margin-top: auto;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  }
 
   p {
     color: var(--color-text-muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-family: var(--font-mono);
+    letter-spacing: 1px;
+    opacity: 0.8;
   }
 }

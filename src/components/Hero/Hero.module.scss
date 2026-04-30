@@ -33,11 +33,22 @@
   h1 {
     font-family: var(--font-mono);
     font-size: clamp(2.5rem, 10vw, 6rem);
-    color: var(--color-text-primary);
+    background: linear-gradient(135deg, #fff 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
     line-height: 1.1;
+    font-weight: 800;
+    filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.1));
+    animation: float 6s ease-in-out infinite;
   }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .tagline {
@@ -101,23 +112,30 @@
 }
 
 .primaryBtn {
-  background: var(--color-accent);
-  color: var(--color-bg);
+  background: linear-gradient(45deg, var(--color-accent), #00a3cc);
+  color: #0a192f;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+  cursor: pointer;
   
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 212, 255, 0.4);
+    filter: brightness(1.1);
   }
 }
 
 .secondaryBtn {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.03);
   color: var(--color-text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
   
   &:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--color-text-primary);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-2px);
   }
 }
 

@@ -1,8 +1,6 @@
 @use '../../styles/variables' as *;
 
-.projects {
-  // handled by global section
-}
+
 
 .grid {
   display: grid;
@@ -15,20 +13,14 @@
 }
 
 .card {
-  @include glass-card;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  transition: var(--transition);
-  height: 100%;
-
-  @media (max-width: 768px) {
-    padding: 1.5rem;
-  }
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+    transform: translateY(-12px) scale(1.01);
+    border-color: rgba(0, 212, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
   }
 
   h3 {
@@ -49,12 +41,19 @@
   align-items: center;
 
   .folder {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--color-accent);
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.3));
+    transition: var(--transition);
 
     @media (max-width: 768px) {
       font-size: 1.8rem;
     }
+  }
+
+  &:hover .folder {
+    transform: scale(1.1) rotate(-5deg);
+    filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.6));
   }
 
   .links {
@@ -95,11 +94,28 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 0.4rem 0.8rem;
-  border-radius: var(--radius-pill);
+  background: rgba(0, 212, 255, 0.05);
+  padding: 0.5rem 0.9rem;
+  border-radius: 4px;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  transition: all 0.3s ease;
+
+  @media (max-width: 1024px) {
+    @include disable-native-popup;
+  }
+
+  &:hover {
+    background: rgba(0, 212, 255, 0.15);
+    transform: translateY(-2px);
+    border-color: var(--color-accent);
+  }
+
+  img {
+    pointer-events: none;
+    width: 14px;
+    height: 14px;
+  }
 }

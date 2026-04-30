@@ -11,24 +11,24 @@ const Projects = () => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
-    const isMobile = window.innerWidth <= 768;
-    gsap.fromTo('.project-card', 
+    gsap.fromTo(`.${styles.card}`,
       {
-        y: isMobile ? 20 : 30,
+        y: 40,
+        scale: 0.8,
         opacity: 0,
       },
       {
         scrollTrigger: {
           trigger: containerRef.current,
-          start: isMobile ? 'top 90%' : 'top 80%',
-          once: true,
+          start: 'top 80%',
+          toggleActions: 'play reverse play reverse'
         },
         y: 0,
+        scale: 1,
         opacity: 1,
-        duration: isMobile ? 0.4 : 0.6,
-        stagger: isMobile ? 0.05 : 0.1,
-        ease: 'power2.out',
-        force3D: true,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: 'back.out(1.2)',
       }
     );
   }, { scope: containerRef });
@@ -64,8 +64,8 @@ const Projects = () => {
                 <span key={i} className={styles.techPill}>
                   <img 
                     src={t.icon.includes(':') 
-                      ? `https://api.iconify.design/${t.icon}.svg${t.icon.startsWith('simple-icons') ? '?color=%2300d4ff' : ''}`
-                      : `https://api.iconify.design/simple-icons:${t.icon}.svg?color=%2300d4ff`
+                      ? `https://api.iconify.design/${t.icon.replace(':', '/')}.svg${t.icon.startsWith('simple-icons') ? '?color=%2300d4ff' : ''}`
+                      : `https://api.iconify.design/simple-icons/${t.icon}.svg?color=%2300d4ff`
                     } 
                     alt={t.name} 
                     width="14" 

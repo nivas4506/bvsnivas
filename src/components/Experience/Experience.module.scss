@@ -1,9 +1,14 @@
 @use '../../styles/variables' as *;
 
+.experience {
+  padding: 100px 0;
+  position: relative;
+}
+
 .timeline {
   position: relative;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 4rem auto 0;
   padding: 2rem 0;
 
   &::before {
@@ -13,87 +18,137 @@
     left: 15px;
     height: 100%;
     width: 2px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 0;
   }
+}
+
+.progressLine {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-accent), transparent);
+  z-index: 1;
+  box-shadow: 0 0 15px var(--color-accent);
 }
 
 .timelineItem {
   position: relative;
-  padding-left: 50px;
-  margin-bottom: 3rem;
+  padding-left: 60px;
+  margin-bottom: 4rem;
+  z-index: 2;
 
   &:last-child {
     margin-bottom: 0;
-  }
-
-  &.active {
-    .timelineDot {
-      background: var(--color-accent);
-      box-shadow: 0 0 10px var(--color-accent);
-    }
   }
 }
 
 .timelineDot {
   position: absolute;
-  left: 9px;
-  top: 5px;
-  width: 14px;
-  height: 14px;
+  left: 6px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background: var(--color-bg);
-  border: 2px solid var(--color-accent);
-  transition: all 0.5s ease;
-  z-index: 2;
+  background: #0a192f;
+  border: 3px solid var(--color-accent);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.1);
+  
+  &.active {
+    background: var(--color-accent);
+    box-shadow: 0 0 20px var(--color-accent);
+    transform: scale(1.2);
+  }
 }
 
 .timelineContent {
   @include glass-card;
-  padding: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
+  will-change: transform, opacity;
+  transition: border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-accent);
+    opacity: 0.3;
+  }
+
+  &:hover {
+    border-color: rgba(0, 212, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  @media (max-width: 1024px) {
+    @include disable-native-popup;
+  }
 
   @media (max-width: 768px) {
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
 
   h3 {
-    color: var(--color-text-primary);
-    font-size: 1.2rem;
+    color: #fff;
+    font-size: 1.4rem;
     margin: 0.5rem 0;
+    letter-spacing: -0.5px;
 
     @media (max-width: 768px) {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
   }
 }
 
 .year {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 4px;
   font-family: var(--font-mono);
   color: var(--color-accent);
   font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .institution {
   color: var(--color-text-muted);
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  font-weight: 500;
 }
 
 .highlights {
   list-style: none;
   padding: 0;
+  display: grid;
+  gap: 12px;
   
   li {
     color: var(--color-text-muted);
     font-size: 0.95rem;
-    margin-bottom: 0.5rem;
+    line-height: 1.6;
     position: relative;
     padding-left: 1.5rem;
 
     &::before {
-      content: '▹';
+      content: '→';
       position: absolute;
       left: 0;
       color: var(--color-accent);
+      font-weight: bold;
     }
   }
 }
+

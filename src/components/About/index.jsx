@@ -11,20 +11,45 @@ const About = () => {
   const containerRef = useRef(null);
 
   useGSAP(() => {
+    // Animate content container
     gsap.fromTo('.about-content', 
       {
-        y: 30,
-        opacity: 0,
+        y: 40,
+        scale: 0.9,
+        opacity: 0
       },
       {
         scrollTrigger: {
           trigger: containerRef.current,
           start: 'top 80%',
+          toggleActions: 'play reverse play reverse'
         },
         y: 0,
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        ease: 'power3.out',
+      }
+    );
+
+    gsap.fromTo(`.${styles.statCard}`,
+      {
+        y: 30,
+        scale: 0.5,
+        opacity: 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: `.${styles.stats}`,
+          start: 'top 85%',
+          toggleActions: 'play reverse play reverse'
+        },
+        y: 0,
+        scale: 1,
         opacity: 1,
         duration: 0.8,
-        ease: 'power3.out',
+        stagger: 0.15,
+        ease: 'back.out(1.7)',
       }
     );
   }, { scope: containerRef });

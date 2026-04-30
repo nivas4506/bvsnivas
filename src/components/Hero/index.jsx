@@ -25,7 +25,7 @@ const Hero = () => {
         const effectOptions = {
           el: myRef.current,
           mouseControls: true,
-          touchControls: true,
+          touchControls: window.innerWidth > 768,
           gyroControls: false,
           minHeight: 200.00,
           minWidth: 200.00,
