@@ -9,6 +9,16 @@
   overflow: hidden;
   padding: 0 5%;
   max-width: none; // override section max-width
+
+  // Subtle dark overlay to improve text readability over Vanta animation
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(10, 10, 15, 0.2) 0%, rgba(10, 10, 15, 0.6) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
 }
 
 .content {
@@ -41,8 +51,10 @@
     letter-spacing: -0.02em;
     line-height: 1.1;
     font-weight: 800;
-    filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.1));
+    // Layered shadows: a dark one for contrast and a subtle cyan one for the "vibe"
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.15));
     animation: float 6s ease-in-out infinite;
+    will-change: transform; // Ensures crisp text rendering during animation
   }
 }
 
@@ -53,10 +65,12 @@
 
 .tagline {
   font-size: clamp(1.1rem, 4vw, 1.8rem);
-  color: var(--color-text-muted);
+  color: var(--color-text-primary); // Increased contrast from muted to primary
   margin-bottom: 3rem;
   max-width: 800px;
   line-height: 1.5;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); // Stronger separation from animated background
+  will-change: transform, opacity;
 }
 
 .statusBadge {
