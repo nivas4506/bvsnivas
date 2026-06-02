@@ -109,7 +109,7 @@ export const portfolio = {
         { name: "Docker", icon: "docker" },
         { name: "Git", icon: "git" }
       ],
-      sourceUrl: "https://github.com/nivas4506/Warehouse-Inventory-Handling-System.git",
+      sourceUrl: "https://github.com/nivas4506/Warehouse-Inventory-Handling-System-.git",
       liveUrl: ""
     },
     {
