@@ -109,7 +109,7 @@ export const portfolio = {
         { name: "Docker", icon: "docker" },
         { name: "Git", icon: "git" }
       ],
-      sourceUrl: "https://github.com/nivas4506",
+      sourceUrl: "https://github.com/nivas4506/Warehouse-Inventory-Handling-System.git",
       liveUrl: ""
     },
     {
@@ -120,7 +120,7 @@ export const portfolio = {
         { name: "Docker", icon: "docker" },
         { name: "FastAPI", icon: "fastapi" }
       ],
-      sourceUrl: "https://github.com/nivas4506",
+      sourceUrl: "https://github.com/nivas4506/Student-Grievance-Redressal-System.git",
       liveUrl: ""
     },
     {
@@ -131,7 +131,7 @@ export const portfolio = {
         { name: "JavaScript", icon: "javascript" },
         { name: "HTML5", icon: "html5" }
       ],
-      sourceUrl: "https://github.com/nivas4506",
+      sourceUrl: "https://github.com/nivas4506/LIQUID-MORPHISM.git",
       liveUrl: ""
     }
   ]
