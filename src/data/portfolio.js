@@ -110,7 +110,7 @@ export const portfolio = {
         { name: "Git", icon: "git" }
       ],
       sourceUrl: "https://github.com/nivas4506/Warehouse-Inventory-Handling-System-.git",
-      liveUrl: ""
+      liveUrl: "https://warehouse-inventory-handling-system.vercel.app/"
     },
     {
       title: "Student Grievance Redressal System",
@@ -121,7 +121,7 @@ export const portfolio = {
         { name: "FastAPI", icon: "fastapi" }
       ],
       sourceUrl: "https://github.com/nivas4506/Student-Grievance-Redressal-System.git",
-      liveUrl: ""
+      liveUrl: "https://warehouse-inventory-handling-system.vercel.app/"
     },
     {
       title: "LIQUID-MORPHISM UI/UX",
@@ -132,7 +132,7 @@ export const portfolio = {
         { name: "HTML5", icon: "html5" }
       ],
       sourceUrl: "https://github.com/nivas4506/LIQUID-MORPHISM.git",
-      liveUrl: ""
+      liveUrl: "https://liquid-morphism.vercel.app/"
     }
   ]
 }
