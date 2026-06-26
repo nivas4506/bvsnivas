@@ -121,7 +121,7 @@ export const portfolio = {
         { name: "FastAPI", icon: "fastapi" }
       ],
       sourceUrl: "https://github.com/nivas4506/Student-Grievance-Redressal-System.git",
-      liveUrl: "https://warehouse-inventory-handling-system.vercel.app/"
+      liveUrl: "https://student-grievance-redressal-system-navy.vercel.app/"
     },
     {
       title: "LIQUID-MORPHISM UI/UX",
