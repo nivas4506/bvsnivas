@@ -39,7 +39,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className={styles.projects} ref={containerRef}>
-      <h2 className="section-title"><span>04.</span> Projects</h2>
+      <h2 className="section-title"><span>05.</span> Projects</h2>
       
       <div className={styles.grid}>
         {portfolio.projects.map((project, index) => (

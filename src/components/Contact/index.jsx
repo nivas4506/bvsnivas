@@ -39,7 +39,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className={styles.contact} ref={containerRef}>
-      <h2 className="section-title"><span>05.</span> Contact</h2>
+      <h2 className="section-title"><span>06.</span> Contact</h2>
       
       <div className={styles.content}>
         <div className={styles.glow} />
