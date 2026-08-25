@@ -157,13 +157,13 @@ export const portfolio = {
       badge: "Algorithms & DSA"
     },
     {
-      title: "Certificate of Academic Achievement",
-      issuer: "KL University",
+      title: "LangChain For Agents",
+      issuer: "LangChain",
       date: "2026",
-      description: "Official certificate of achievement recognizing proficiency in computer science fundamentals and practical projects.",
-      fileUrl: "/certificates/B.v.s.%20Nivas%20Chowdary%20-%202026-06-03.pdf",
-      icon: "mdi:certificate-outline",
-      badge: "Academic Honor"
+      description: "Comprehensive certification covering LangChain framework, autonomous agent architecture, custom tool calling, memory management, and multi-agent orchestration.",
+      fileUrl: "/certificates/Langchain_for_agents_certificate_bvsnivaschowdary-gmail-com.pdf",
+      icon: "simple-icons:langchain",
+      badge: "AI & LLM Systems"
     }
   ],
   projects: [
