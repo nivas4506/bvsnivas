@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from './Navbar.module.scss';
 import { portfolio } from '../../data/portfolio';
 import gsap from 'gsap';

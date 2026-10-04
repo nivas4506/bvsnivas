@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import styles from './Contact.module.scss';
 import { portfolio } from '../../data/portfolio';
 import { useGSAP } from '@gsap/react';
@@ -77,6 +77,18 @@ const Contact = () => {
           <a href={portfolio.socials.linkedin} target="_blank" rel="noreferrer" className={styles.socialLink}>
             <img src="https://api.iconify.design/simple-icons/linkedin.svg?color=%2300d4ff" alt="LinkedIn" />
             <span>LinkedIn</span>
+          </a>
+          <a href={`https://twitter.com/${portfolio.socials.twitter}`} target="_blank" rel="noreferrer" className={styles.socialLink}>
+            <img src="https://cdn.simpleicons.org/x/ffffff" alt="Twitter" />
+            <span>@{portfolio.socials.twitter}</span>
+          </a>
+          <div className={styles.socialLink}>
+            <img src="https://cdn.simpleicons.org/discord/5865F2" alt="Discord" />
+            <span>{portfolio.socials.discord}</span>
+          </div>
+          <a href={`https://instagram.com/${portfolio.socials.instgram}`} target="_blank" rel="noreferrer" className={styles.socialLink}>
+            <img src="https://cdn.simpleicons.org/instagram/E1306C" alt="Instagram" />
+            <span>@{portfolio.socials.instgram}</span>
           </a>
         </div>
       </div>

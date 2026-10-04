@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from './Certificates.module.scss';
 import { portfolio } from '../../data/portfolio';
 import { useGSAP } from '@gsap/react';
@@ -119,9 +119,11 @@ const Certificates = () => {
                       <div className={styles.titleRow}>
                         <div className={styles.iconWrapper}>
                           <img 
-                            src={cert.icon.includes(':') 
-                              ? `https://api.iconify.design/${cert.icon.replace(':', '/')}.svg${cert.icon.startsWith('simple-icons') ? '?color=%2300d4ff' : ''}`
-                              : `https://api.iconify.design/simple-icons/${cert.icon}.svg?color=%2300d4ff`
+                            src={cert.icon.startsWith('simple-icons:')
+                              ? `https://cdn.simpleicons.org/${cert.icon.split(':')[1]}/00d4ff`
+                              : cert.icon.includes(':')
+                                ? `https://api.iconify.design/${cert.icon.replace(':', '/')}.svg`
+                                : `https://cdn.simpleicons.org/${cert.icon}/00d4ff`
                             } 
                             alt={cert.issuer} 
                             width="22" 

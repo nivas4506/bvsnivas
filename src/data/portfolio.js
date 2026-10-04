@@ -4,7 +4,7 @@ export const portfolio = {
   tagline: "CS Engineer · AI Infrastructure · Containerized Systems",
   email: "bvsnivaschowdary@gmail.com",
   phone: "+91 7997045477",
-  resume: "/resume.pdf",
+  resume: "/Nivas.CV.pdf",
   status: "Open to research internships & SWE roles",
   socials: {
     github: "https://github.com/nivas4506",
@@ -199,6 +199,30 @@ export const portfolio = {
       ],
       sourceUrl: "https://github.com/nivas4506/LIQUID-MORPHISM.git",
       liveUrl: "https://liquid-morphism.vercel.app/"
+    },
+    {
+      title: "MicroDeploy - Microservices CI/CD Platform",
+      description: "Cloud-native microservices platform built with FastAPI, Docker Compose, Kubernetes, and GitHub Actions. Includes an API gateway, domain services, automated testing, CI/CD, and monitoring infrastructure.",
+      tech: [
+        { name: "Python", icon: "python" },
+        { name: "FastAPI", icon: "fastapi" },
+        { name: "Docker", icon: "docker" },
+        { name: "Kubernetes", icon: "kubernetes" }
+      ],
+      sourceUrl: "https://github.com/nivas4506/Micro-Service-Template-.git"
+    },
+    {
+      title: "AI Test Engineering",
+      description: "AI-powered repository testing platform that analyzes source code, generates and executes tests, retries failures, debugs results, and stores reports through a deployable FastAPI application.",
+      tech: [
+        { name: "Python", icon: "python" },
+        { name: "FastAPI", icon: "fastapi" },
+        { name: "JavaScript", icon: "javascript" },
+        { name: "OpenAI", icon: "simple-icons:openai" },
+        { name: "Docker", icon: "docker" }
+      ],
+      sourceUrl: "https://github.com/nivas4506/ai-test-engineering-codex-hackathon.git",
+      liveUrl: "https://ai-test-engineering-codex-hackathon.vercel.app/"
     }
   ]
 }

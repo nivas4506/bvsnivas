@@ -76,9 +76,11 @@ const Projects = () => {
               {project.tech.map((t, i) => (
                 <span key={i} className={styles.techPill}>
                   <img 
-                    src={t.icon.includes(':') 
-                      ? `https://api.iconify.design/${t.icon.replace(':', '/')}.svg${t.icon.startsWith('simple-icons') ? '?color=%2300d4ff' : ''}`
-                      : `https://api.iconify.design/simple-icons/${t.icon}.svg?color=%2300d4ff`
+                    src={t.icon.startsWith('simple-icons:')
+                      ? `https://cdn.simpleicons.org/${t.icon.split(':')[1]}/00d4ff`
+                      : t.icon.includes(':')
+                        ? `https://api.iconify.design/${t.icon.replace(':', '/')}.svg`
+                        : `https://cdn.simpleicons.org/${t.icon}/00d4ff`
                     } 
                     alt={t.name} 
                     width="14" 

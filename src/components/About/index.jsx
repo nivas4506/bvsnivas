@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import styles from './About.module.scss';
 import { portfolio } from '../../data/portfolio';
 import { useGSAP } from '@gsap/react';

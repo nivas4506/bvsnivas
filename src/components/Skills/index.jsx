@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import styles from './Skills.module.scss';
 import { portfolio } from '../../data/portfolio';
 import { useGSAP } from '@gsap/react';
@@ -53,9 +53,11 @@ const Skills = () => {
               {category.items.map((item, i) => (
                 <div key={i} className={`skill-item ${styles.item}`}>
                   <img 
-                    src={item.icon.includes(':') 
-                      ? `https://api.iconify.design/${item.icon.replace(':', '/')}.svg${item.icon.startsWith('simple-icons') ? '?color=%2300d4ff' : ''}`
-                      : `https://api.iconify.design/simple-icons/${item.icon}.svg?color=%2300d4ff`
+                    src={item.icon.startsWith('simple-icons:')
+                      ? `https://cdn.simpleicons.org/${item.icon.split(':')[1]}/00d4ff`
+                      : item.icon.includes(':')
+                        ? `https://api.iconify.design/${item.icon.replace(':', '/')}.svg`
+                        : `https://cdn.simpleicons.org/${item.icon}/00d4ff`
                     } 
                     alt={item.name} 
                     className={styles.icon}

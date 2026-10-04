@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import styles from './Experience.module.scss';
 import { portfolio } from '../../data/portfolio';
 import { useGSAP } from '@gsap/react';
@@ -29,7 +29,7 @@ const Experience = () => {
 
     const items = gsap.utils.toArray(`.${styles.timelineItem}`);
     
-    items.forEach((item, i) => {
+    items.forEach((item) => {
       const content = item.querySelector(`.${styles.timelineContent}`);
       const dot = item.querySelector(`.${styles.timelineDot}`);
       
