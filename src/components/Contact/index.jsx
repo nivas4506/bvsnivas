@@ -82,10 +82,10 @@ const Contact = () => {
             <img src="https://cdn.simpleicons.org/x/ffffff" alt="Twitter" />
             <span>@{portfolio.socials.twitter}</span>
           </a>
-          <div className={styles.socialLink}>
+          <a href={portfolio.socials.discord} target="_blank" rel="noreferrer" className={styles.socialLink}>
             <img src="https://cdn.simpleicons.org/discord/5865F2" alt="Discord" />
             <span>{portfolio.socials.discord}</span>
-          </div>
+          </a>
           <a href={`https://instagram.com/${portfolio.socials.instgram}`} target="_blank" rel="noreferrer" className={styles.socialLink}>
             <img src="https://cdn.simpleicons.org/instagram/E1306C" alt="Instagram" />
             <span>@{portfolio.socials.instgram}</span>
