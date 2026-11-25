@@ -10,7 +10,7 @@ export const portfolio = {
     github: "https://github.com/nivas4506",
     linkedin: "https://linkedin.com/in/bvsnivaschowdary",
     twitter: "BvsNivasChow",
-    discord: "https://discord.com/channels/nivas.dev",
+    discord: "https://discord.com/@nivas.dev",
     instgram: "B.v.s.nivas_chowdary"
   },
   about: `Computer Science and Engineering student at KL University with hands-on experience building scalable, containerized, and data-driven systems. Proficient in Python, C++, JavaScript, Docker, and Git, with a strong foundation in data structures, algorithms, and system design. Actively exploring AI agent systems, container orchestration, and distributed infrastructure.`,
